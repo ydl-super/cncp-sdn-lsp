@@ -1,0 +1,45 @@
+syntax = "proto3";
+package openhip.hip;
+option go_package = "go.pantheon.tech/stonework/proto/hip;openhip_hip";
+
+message HipCMD{
+  bool is_detail =1;
+  bool is_quiet=2;
+  bool is_deamon=3;
+  bool is_r1=4;
+  bool is_opportunistic=5;
+  bool is_allow_any=6;
+  string conf_path=7;
+  bool is_persissive=8;
+  bool is_no_retransmit=9;
+  string trigger_address=10 ;
+  bool is_rvs=11;
+  bool is_mr=12;
+  bool is_mh=13;
+}
+
+
+message HitgenCMD{
+  bool is_detail =1;
+  string basename=2;
+  enum EncryptionType {
+    DSA= 0;
+    RSA = 1;
+    ECDSA = 2;
+    EdDSA = 3;
+  };
+  EncryptionType encryption=3;
+  uint32 curve_id=4;
+  uint32 hit_suit_id=5;
+  uint32 bits=6;
+  uint32 length=7;
+  bool is_anon=8;
+  bool is_incoming=9;
+  uint64 r1_count=10;
+  string file_path=11;
+  bool is_publish=12;
+  bool is_conf=13;
+  bool is_noinput=14;
+  bool is_append=15;
+  string hhit=16;
+}

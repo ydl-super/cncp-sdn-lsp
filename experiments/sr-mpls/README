@@ -1,0 +1,29 @@
+[Experiment] SR-MPLS
+
+In this experiment, the SR-MPLS topology is configured in one direction only:
+From c1, via c2 to c4, to mimic [the example depicted here](https://wiki.fd.io/view/VPP/Segment_Routing_for_MPLS).
+
+A manual configuration is used, i.e. the VPP configuration is entered using a CLI config file defined in [vpp-startup.conf](./vpp-startup.conf) and serves as preparation for potential future integration of **StoneWork with VPP MPLS**.
+
+## Testing SR-MPLS
+
+1. To test the SR-MPLS, run:
+$ make start-topology
+
+2. Then go to the client and server by:
+  $ docker exec -it ip4-client bash
+  $ docker exec -it ip4-server bash
+
+3. Try to ping the server from client:
+client $ ping 2.2.2.2 -I tap-c1
+
+4. Watch for incoming packets on server:
+server $ tcpdump -nvvXXes 0 -i tap-c4 icmp
+
+5. If you see incoming pings, then everything is good.
+
+**Note**: You will not see a response on client side, since SR-MPLS is configured
+in one way only.
+
+6. Finally, to shutdown the topology run:
+$ make stop-topology
