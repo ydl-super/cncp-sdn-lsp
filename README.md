@@ -5,6 +5,34 @@ paper：
 
 Donglei Yuan, Chi Jiang, Yuli Zhao, Hai Yu, Zhiliang Zhu
 
+SRv6 (Segment Routing over IPv6) serves as the
+cornerstone for next-generation internet solutions. The current
+SDN architectures are incapable of providing concurrent control
+plane configuration for hybrid data planes that incorporate both
+VPP and Linux, thereby curtailing the cross-plane technological
+benefits inherent to SRv6. Furthermore, the necessity to maintain
+synchronization among disparate controllers escalates opera-
+tional costs and impedes the unified southbound management
+of SRv6 on the control plane for both Linux and VPP nodes.
+To address these challenges, we have reengineered the SDN
+architecture for cloud-native networking, introducing a south-
+bound interface LSP (Linux SR Plugin) component designed to
+facilitate SRv6 support. Additionally, we have integrated the LSP
+with a cloud platform through a key-value store, enhancing its
+northbound API server capabilities. This integration culminates
+in the deployment of the LSP as a plugin within the cloud envi-
+ronment, enabling users to focus solely on their business require-
+ments and manage the hybrid data plane seamlessly through the
+API interface. Subsequently, we constructed a simulation testing
+environment for the expanded plugin to validate its functionality
+and performance. The findings demonstrate that the LSP is
+capable of verifying all SRv6 configurations supported by both
+Linux and VPP data planes, while also meeting the performance
+benchmark of processing at least 400 configurations per second.
+This achievement underscores the LSP’s ability to provide a
+unified southbound control and management Architecture for
+SRv6 across both VPP and Linux data planes.
+
 
 
 
@@ -14,9 +42,7 @@ Donglei Yuan, Chi Jiang, Yuli Zhao, Hai Yu, Zhiliang Zhu
 
 A **high-performance** data plane, **modular** control plane solution.
 
-StoneWork is used by PANTHEON.tech to integrate [its cloud-native network functions][cdnf-io] on top of a single shared
-[FD.io VPP][VPP] data plane instance, to achieve the *best possible* resource
-utilization. 
+cncp-sdn-lsp supported linux and vpp data plane
 
 This network appliance, however, is not a step back from distributed chained/meshed microservices, to monolithic architecture. 
 
@@ -30,6 +56,7 @@ Instead, the integration is:
 ## Features
 
 * High-performance [VPP][VPP]-based **data plane**
+* Linux-based **data plane**
 * Management agent build on top of [Ligato VPP-Agent][ligato-vpp-agent]
 * Suitable for both **cloud & bare-metal** deployments
 * Can be deployed as either *multiple* interconnected instances (service function
