@@ -1,5 +1,8 @@
-# StoneWork
+# lsp fork stonework
+paper：
+A Hybrid Data Plane SDN Architecture based on Cloud-native for Segment Routing over IPv6
 
+Donglei Yuan, Chi Jiang, Yuli Zhao, Hai Yu, Zhiliang Zhu
  [![CI](https://github.com/PANTHEONtech/StoneWork/actions/workflows/ci.yml/badge.svg)](https://github.com/PANTHEONtech/StoneWork/actions/workflows/ci.yml)
  [![stable](https://img.shields.io/github/release/PANTHEONtech/StoneWork.svg?label=latest%20release&logo=github)](https://github.com/PANTHEONtech/StoneWork/releases/latest)
  [![ligato/vpp-agent](https://img.shields.io/badge/image-ghcr.io/pantheontech/stonework-blue.svg?logo=docker&logoColor=white)](https://github.com/PANTHEONtech/StoneWork/pkgs/container/stonework)
