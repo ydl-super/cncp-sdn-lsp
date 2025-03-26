@@ -52,7 +52,20 @@ Instead, the integration is:
 - CNF discovery
 - Sharing of network namespaces and 
 - Re-use of data paths for packet punting between CNFs
-
+## Release Schedule:
+* Version policy:Follow semantic versioning: major version numbers.
+  
+* Major update: Breaking feature changes or API incompatibilities.
+  
+* Second version update: New features backward compatibility.
+  
+* Revision number Update: Bug fix or documentation improvement.
+* Release Cycle: Released quarterly (with full testing and documentation).
+  
+* Hot fix: Release revisions as soon as urgent issues are fixed.
+  
+* CHANGELOG:
+   Update the CHANGELOG.md with each release to record new features, fixes, and known issues.
 ## Features
 
 * High-performance [VPP][VPP]-based **data plane**
