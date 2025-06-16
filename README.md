@@ -56,9 +56,9 @@ Instead, the integration is:
 - June 16, 2025:
 - We supplemented the SRv6 testing implementation through netconf in different device types at this stage.
 - These include:
-- H3C equipment
-- SONiC equipment
-- Linux Network stack
+ H3C equipment
+ SONiC equipment
+ Linux Network stack
 
 The main supplement is the experimental analysis to verify the advantages of LSP.
 
