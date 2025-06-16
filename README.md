@@ -52,6 +52,17 @@ Instead, the integration is:
 - CNF discovery
 - Sharing of network namespaces and 
 - Re-use of data paths for packet punting between CNFs
+## Logs:
+June 16, 2025:
+We supplemented the SRv6 testing implementation through netconf in different device types at this stage.
+These include:
+H3C equipment
+SONiC equipment
+Linux Network stack
+
+The main supplement is the experimental analysis to verify the advantages of LSP.
+
+In the next stage, we will open source the implementation of the UI interface of the SRv6 controller part of the CNCP platform.
 ## Release Schedule:
 * Version policy:Follow semantic versioning: major version numbers.
   
